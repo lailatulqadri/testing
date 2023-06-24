@@ -1,9 +1,12 @@
 import pandas as pd
 import streamlit as st
+import matplotlib.pyplot as plt
 
 speed = [0.1, 17.5, 40, 48, 52, 69, 88]
 lifespan = [2, 8, 70, 1.5, 25, 12, 28]
 index = ["snail", "pig", "elephant", "rabbit", "giraffe", "coyote", "horse"]
 df = pd.DataFrame({"speed": speed, "lifespan": lifespan}, index=index)
+fig = plt.figure() 
+plt.plot(df) 
 
-st.pyplot(df.plot.barh(stacked=True))
+st.pyplot(fig)
