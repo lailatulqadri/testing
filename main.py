@@ -6,4 +6,4 @@ lifespan = [2, 8, 70, 1.5, 25, 12, 28]
 index = ["snail", "pig", "elephant", "rabbit", "giraffe", "coyote", "horse"]
 df = pd.DataFrame({"speed": speed, "lifespan": lifespan}, index=index)
 
-st.pyplot(df.plot.barh(stacked=True).figure)
+st.pyplot(df.plot.barh(stacked=True))
